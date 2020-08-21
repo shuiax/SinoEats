@@ -50,4 +50,7 @@ public class ItemList {
             () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
+    public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
 }
