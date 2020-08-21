@@ -23,5 +23,16 @@ public class ItemList {
             () -> new Item(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(1.2f).build())));
 
+    public static final RegistryObject<Item> PEPPER_SEEDS = ITEMS.register("pepper_crop",
+            () -> new BlockItem(BlockList.PEPPER_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> TEA_SEEDS = ITEMS.register("tea_crop",
+            () -> new BlockItem(BlockList.TEA_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
 
 }

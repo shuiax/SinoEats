@@ -60,6 +60,8 @@ public class Main
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(BlockList.RICE_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockList.PEPPER_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockList.TEA_CROP.get(), RenderType.getCutout());
     }
 
     public static class ModItemGroup extends ItemGroup {
