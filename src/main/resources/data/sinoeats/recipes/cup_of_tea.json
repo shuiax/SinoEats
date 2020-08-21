@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "WWW",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:water_bucket"
+    },
+    "W": {
+      "item": "sinoeats:tea_leaf"
+    },
+    "B": {
+      "item": "sinoeats:cup"
+    }
+  },
+  "result": {
+    "item": "sinoeats:cup_of_tea",
+    "count": 3
+  }
+}
