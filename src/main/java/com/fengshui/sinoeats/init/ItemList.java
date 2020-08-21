@@ -34,6 +34,10 @@ public class ItemList {
     public static final RegistryObject<Item> TEA_SEEDS = ITEMS.register("tea_crop",
             () -> new BlockItem(BlockList.TEA_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
+    
+    public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_crop",
+            () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
 
     //ingredients
   
@@ -42,6 +46,7 @@ public class ItemList {
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(Main.TAB)));
+
 
     //consumables
 
@@ -56,5 +61,6 @@ public class ItemList {
     public static final RegistryObject<Item> CUP_OF_TEA = ITEMS.register("cup_of_tea",
             () -> new BowlFood(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(1.2f).build())));
+
 
 }
