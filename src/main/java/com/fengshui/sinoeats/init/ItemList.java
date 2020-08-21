@@ -1,6 +1,9 @@
 package com.fengshui.sinoeats.init;
 
 import com.fengshui.sinoeats.Main;
+import com.fengshui.sinoeats.items.BowlFood;
+import com.fengshui.sinoeats.items.CupFood;
+import com.fengshui.sinoeats.items.ModdingToolItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -13,15 +16,24 @@ public class ItemList {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
 
     public static final RegistryObject<Item> MODDING_TOOL = ITEMS.register("modding_tool",
-            () -> new Item(new Item.Properties().group(Main.TAB)));
+            () -> new ModdingToolItem(new Item.Properties().group(Main.TAB)));
 
     public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_crop",
             () -> new BlockItem(BlockList.RICE_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
+git
+    public static final RegistryObject<Item> RAW_RICE = ITEMS.register("raw_rice",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
 
     public static final RegistryObject<Item> RICE = ITEMS.register("rice",
-            () -> new Item(new Item.Properties().group(Main.TAB)
+            () -> new BowlFood(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(1.2f).build())));
+
+    public static final RegistryObject<Item> CUP = ITEMS.register("cup",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> CUP_OF_TEA = ITEMS.register("cup_of_tea",
+            () -> new CupFood(new Item.Properties().group(Main.TAB)));
 
 
 }
