@@ -46,4 +46,8 @@ public class ItemList {
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(Main.TAB)));
 
+    public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_crop",
+            () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
 }
