@@ -56,11 +56,11 @@ public class Main
 
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
+    private void setup(final FMLCommonSetupEvent event) { }
+
+    private void doClientStuff(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(BlockList.RICE_CROP.get(), RenderType.getCutout());
     }
-
-    private void doClientStuff(final FMLClientSetupEvent event) { }
 
     public static class ModItemGroup extends ItemGroup {
 
