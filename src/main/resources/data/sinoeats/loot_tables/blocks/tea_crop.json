@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -12,13 +12,13 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "sinoeats:rice_crop",
+                  "block": "sinoeats:tea_crop",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "sinoeats:rice_crop",
+              "name": "sinoeats:tea_leaf",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -39,11 +39,45 @@
             },
             {
               "type": "minecraft:item",
-              "name": "sinoeats:rice_crop"
+              "name": "sinoeats:tea_crop"
             }
           ]
         }
       ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
+            }
+          ],
+          "name": "sinoeats:tea_crop"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sinoeats:tea_crop",
+          "properties": {
+            "age": "7"
+          }
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
     }
   ]
 }
