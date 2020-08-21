@@ -63,4 +63,7 @@ public class ItemList {
                     .food(new Food.Builder().hunger(6).saturation(1.2f).build())));
 
 
+    public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
 }
