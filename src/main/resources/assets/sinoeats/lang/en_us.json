@@ -1,5 +1,7 @@
 {
   "itemGroup.mod_group": "Mod Items",
   "item.sinoeats.modding_tool": "Modding Tool",
-  "block.sinoeats.rice_crop": "Rice Seeds"
+  "block.sinoeats.rice_crop": "Rice Seeds",
+  "block.sinoeats.tea_crop": "Tea Seeds",
+  "item.sinoeats.tea_leaf": "Tea Leaf"
 }

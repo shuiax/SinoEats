@@ -21,7 +21,7 @@ public class ItemList {
     public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_crop",
             () -> new BlockItem(BlockList.RICE_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
-git
+  
     public static final RegistryObject<Item> RAW_RICE = ITEMS.register("raw_rice",
             () -> new Item(new Item.Properties().group(Main.TAB)));
 
@@ -35,5 +35,15 @@ git
     public static final RegistryObject<Item> CUP_OF_TEA = ITEMS.register("cup_of_tea",
             () -> new CupFood(new Item.Properties().group(Main.TAB)));
 
+    public static final RegistryObject<Item> PEPPER_SEEDS = ITEMS.register("pepper_crop",
+            () -> new BlockItem(BlockList.PEPPER_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> TEA_SEEDS = ITEMS.register("tea_crop",
+            () -> new BlockItem(BlockList.TEA_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
 
 }
