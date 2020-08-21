@@ -34,7 +34,6 @@ public class Main
     public Main() {
         instance = this;
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
 

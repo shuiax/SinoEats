@@ -54,7 +54,7 @@ public class ItemList {
             () -> new BowlFood(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(5).saturation(6f).build())));
 
-    public static final RegistryObject<Item> FRIED_RICE = ITEMS.register("rice",
+    public static final RegistryObject<Item> FRIED_RICE = ITEMS.register("fried_rice",
             () -> new BowlFood(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(8).saturation(8f).build())));
 
