@@ -14,12 +14,10 @@ public class CupFood extends Item {
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        ItemStack itemstack = super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (entityLiving instanceof PlayerEntity && ((PlayerEntity)entityLiving).abilities.isCreativeMode){
-            return itemstack;
+        if (entityLiving instanceof PlayerEntity && !((PlayerEntity)entityLiving).abilities.isCreativeMode){
+            ((PlayerEntity) entityLiving).inventory.addItemStackToInventory(new ItemStack(ItemList.CUP.get()));
         }
-        ((PlayerEntity)entityLiving).inventory.addItemStackToInventory(new ItemStack(ItemList.CUP.get()));
-        return stack;
+        return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
 
 }
