@@ -1,5 +1,6 @@
 package com.fengshui.sinoeats.items;
 
+import com.fengshui.sinoeats.init.ItemList;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -13,8 +14,8 @@ public class BowlFood extends Item {
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        if (entityLiving instanceof PlayerEntity && !((PlayerEntity)entityLiving).abilities.isCreativeMode){
-            ((PlayerEntity) entityLiving).inventory.addItemStackToInventory(new ItemStack(Items.BOWL));
+        if (entityLiving instanceof PlayerEntity && !((PlayerEntity)entityLiving).abilities.isCreativeMode ){
+            ((PlayerEntity)entityLiving).inventory.addItemStackToInventory(new ItemStack(Items.BOWL));
         }
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }

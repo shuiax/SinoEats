@@ -3,6 +3,8 @@
   "item.sinoeats.modding_tool": "Modding Tool",
   "block.sinoeats.rice_crop": "Rice Seeds",
   "block.sinoeats.soybean_crop": "Soybeans",
+  "block.sinoeats.pepper_crop": "Pepper Seeds",
   "block.sinoeats.tea_crop": "Tea Seeds",
-  "item.sinoeats.tea_leaf": "Tea Leaf"
+  "item.sinoeats.tea_leaf": "Tea Leaf",
+  "item.sinoeats.pepper": "Pepper"
 }
