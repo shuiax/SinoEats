@@ -7,6 +7,8 @@ import com.fengshui.sinoeats.items.ModdingToolItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -64,6 +66,8 @@ public class ItemList {
 
 
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
-            () -> new Item(new Item.Properties().group(Main.TAB)));
+            () -> new Item(new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(2).saturation(0.6f).fastToEat().setAlwaysEdible()
+                            .effect(new EffectInstance(Effects.SPEED, 40, 2), 0.7f).build())));
 
 }
