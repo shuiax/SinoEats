@@ -2,7 +2,8 @@ package com.fengshui.sinoeats.init;
 
 import com.fengshui.sinoeats.Main;
 import com.fengshui.sinoeats.items.BowlFood;
-import com.fengshui.sinoeats.items.CupFood;
+import com.fengshui.sinoeats.items.SoymilkItem;
+import com.fengshui.sinoeats.items.TeaItem;
 import com.fengshui.sinoeats.items.ModdingToolItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
@@ -58,11 +59,15 @@ public class ItemList {
 
     public static final RegistryObject<Item> FRIED_RICE = ITEMS.register("fried_rice",
             () -> new BowlFood(new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(8).saturation(8f).build())));
+                    .food(new Food.Builder().hunger(8).saturation(6f).build())));
 
-    public static final RegistryObject<Item> CUP_OF_TEA = ITEMS.register("cup_of_tea",
-            () -> new BowlFood(new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(6).saturation(1.2f).build())));
+    public static final RegistryObject<Item> TEA = ITEMS.register("tea",
+            () -> new TeaItem(new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(2).saturation(7f).build())));
+
+    public static final RegistryObject<Item> SOYMILK = ITEMS.register("soymilk",
+            () -> new SoymilkItem(new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(3).saturation(7f).build())));
 
 
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",

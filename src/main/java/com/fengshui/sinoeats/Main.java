@@ -8,6 +8,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,7 +33,6 @@ public class Main
     private static final Logger LOGGER = LogManager.getLogger();
 
     public Main() {
-        instance = this;
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
@@ -40,6 +40,9 @@ public class Main
         ItemList.ITEMS.register(modEventBus);
         BlockList.BLOCKS.register(modEventBus);
         BlockList.NO_ITEM_BLOCKS.register(modEventBus);
+
+        instance = this;
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @SubscribeEvent
