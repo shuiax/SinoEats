@@ -42,6 +42,10 @@ public class ItemList {
             () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_crop",
+            () -> new BlockItem(BlockList.TOMATO_CROP.get(),
+                    new Item.Properties().group(Main.TAB)));
+
     //ingredients
   
     public static final RegistryObject<Item> RAW_RICE = ITEMS.register("raw_rice",
@@ -72,7 +76,11 @@ public class ItemList {
 
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(2).saturation(0.6f).fastToEat().setAlwaysEdible()
+                    .food(new Food.Builder().hunger(1).saturation(0.2f).fastToEat().setAlwaysEdible()
                             .effect(new EffectInstance(Effects.SPEED, 40, 2), 0.7f).build())));
+
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(4).saturation(3.0f).build())));
 
 }

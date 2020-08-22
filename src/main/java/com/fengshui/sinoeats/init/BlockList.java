@@ -1,10 +1,7 @@
 package com.fengshui.sinoeats.init;
 
 import com.fengshui.sinoeats.Main;
-import com.fengshui.sinoeats.blocks.PepperCropsBlock;
-import com.fengshui.sinoeats.blocks.RiceCropsBlock;
-import com.fengshui.sinoeats.blocks.SoybeanCropsBlock;
-import com.fengshui.sinoeats.blocks.TeaCropsBlock;
+import com.fengshui.sinoeats.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -31,5 +28,9 @@ public class BlockList {
 
     public static final RegistryObject<Block> SOYBEAN_CROP = NO_ITEM_BLOCKS.register("soybean_crop",
             () -> new SoybeanCropsBlock(Block.Properties.create(Material.PLANTS)
+                    .doesNotBlockMovement().tickRandomly().sound(SoundType.PLANT)));
+
+    public static final RegistryObject<Block> TOMATO_CROP = NO_ITEM_BLOCKS.register("tomato_crop",
+            () -> new TomatoCropsBlock(Block.Properties.create(Material.PLANTS)
                     .doesNotBlockMovement().tickRandomly().sound(SoundType.PLANT)));
 }
