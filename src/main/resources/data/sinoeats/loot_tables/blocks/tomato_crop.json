@@ -12,13 +12,13 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "sinoeats:pepper_crop",
+                  "block": "sinoeats:tomato_crop",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "sinoeats:pepper",
+              "name": "sinoeats:tomato",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -39,7 +39,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "sinoeats:pepper_crop"
+              "name": "sinoeats:tomato_crop"
             }
           ]
         }
@@ -61,13 +61,13 @@
               }
             }
           ],
-          "name": "sinoeats:pepper_crop"
+          "name": "sinoeats:tomato_crop"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "sinoeats:pepper_crop",
+          "block": "sinoeats:tomato_crop",
           "properties": {
             "age": "7"
           }

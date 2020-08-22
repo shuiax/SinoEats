@@ -5,6 +5,8 @@
   "block.sinoeats.soybean_crop": "Soybeans",
   "block.sinoeats.pepper_crop": "Pepper Seeds",
   "block.sinoeats.tea_crop": "Tea Seeds",
+  "block.sinoeats.tomato_crop": "Tomato Seeds",
+  "item.sinoeats.tomato": "Tomato",
   "item.sinoeats.tea_leaf": "Tea Leaf",
   "item.sinoeats.pepper": "Pepper"
 }

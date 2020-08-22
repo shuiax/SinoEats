@@ -62,6 +62,7 @@ public class Main
         RenderTypeLookup.setRenderLayer(BlockList.PEPPER_CROP.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockList.TEA_CROP.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockList.SOYBEAN_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockList.TOMATO_CROP.get(), RenderType.getCutout());
     }
 
     public static class ModItemGroup extends ItemGroup {
