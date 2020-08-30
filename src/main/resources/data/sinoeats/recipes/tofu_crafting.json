@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sinoeats:soymilk"
+    }
+  ],
+  "result": {
+    "item": "sinoeats:tofu",
+    "count": 1
+  }
+}

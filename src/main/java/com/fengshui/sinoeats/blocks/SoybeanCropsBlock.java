@@ -28,7 +28,7 @@ public class SoybeanCropsBlock extends CropsBlock {
 
     @Override
     protected IItemProvider getSeedsItem() {
-        return ItemList.SOYBEAN_SEEDS.get();
+        return ItemList.SOYBEAN_CROP.get();
     }
 
     @Override
