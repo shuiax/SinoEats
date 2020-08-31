@@ -37,7 +37,7 @@ public class BlockContainerFood extends BlockItem {
         if(KeyboardHelper.isHoldingShift()){
             return super.onItemUse(context);
         }
-        return ActionResult.resultConsume(this).getType();
+        return ActionResultType.PASS;
     }
 
     @Override

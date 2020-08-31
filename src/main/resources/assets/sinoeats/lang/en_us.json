@@ -9,6 +9,7 @@
   "block.sinoeats.tomato_crop": "Tomato Seeds",
 
   "block.sinoeats.wild_plant": "Grass",
+  "block.sinoeats.bowl_block": "Bowl",
 
   "item.sinoeats.cup": "Cup",
 
@@ -17,7 +18,7 @@
 
   "item.sinoeats.tomato": "Tomato",
   "item.sinoeats.pepper": "Pepper",
-  "item.sinoeats.rice": "Rice",
+  "block.sinoeats.rice": "Rice",
 
   "item.sinoeats.tea": "Tea",
   "item.sinoeats.soymilk": "Soymilk",

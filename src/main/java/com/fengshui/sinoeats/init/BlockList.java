@@ -42,7 +42,7 @@ public class BlockList {
             () -> new BowlBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)));
 
     //consumables
-    public static final RegistryObject<Block> RICE_BLOCK = BLOCKS.register("rice_block",
+    public static final RegistryObject<Block> RICE_BLOCK = BLOCKS.register("rice",
             () -> new RiceBlock(Block.Properties.create(Material.CAKE).hardnessAndResistance(1f, 2.0f)
                     .sound(SoundType.CLOTH)));
 

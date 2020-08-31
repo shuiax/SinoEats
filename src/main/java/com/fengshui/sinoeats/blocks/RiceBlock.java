@@ -8,18 +8,22 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.particles.ItemParticleData;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import java.util.stream.Stream;
 
@@ -27,7 +31,7 @@ public class RiceBlock extends Block {
 
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    private static final VoxelShape SHAPE = Stream.of(
+    private static final VoxelShape SHAPE_N = Stream.of(
             Block.makeCuboidShape(3, 3, 6, 4, 4, 10),
             Block.makeCuboidShape(12, 3, 6, 13, 4, 10),
             Block.makeCuboidShape(6, 3, 3, 10, 4, 4),
@@ -63,6 +67,9 @@ public class RiceBlock extends Block {
             Block.makeCuboidShape(5, 4.75, 6, 6, 5.25, 10),
             Block.makeCuboidShape(6, 5.25, 6, 10, 5.65, 10)
     ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
+    private static final VoxelShape SHAPE_W = SHAPE_N;
+    private static final VoxelShape SHAPE_S = SHAPE_N;
+    private static final VoxelShape SHAPE_E = SHAPE_N;
 
     public RiceBlock(Properties properties) {
         super(properties);
@@ -71,7 +78,16 @@ public class RiceBlock extends Block {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return SHAPE;
+        switch (state.get(FACING)) {
+            case SOUTH:
+                return SHAPE_S;
+            case EAST:
+                return SHAPE_E;
+            case WEST:
+                return SHAPE_W;
+            default:
+                return SHAPE_N;
+        }
     }
 
     @Override
@@ -103,7 +119,18 @@ public class RiceBlock extends Block {
         }
         ItemStack itemStack = new ItemStack(item);
 
-        if (player.canEat(food.canEatWhenFull()) || player.isCreative()) {
+        if (player.canEat(food.canEatWhenFull()) || player.isCreative()) { //make it take time to eat;
+            if(food.isFastEating()){}
+            if (!itemStack.isEmpty() && player.isHandActive()) {
+                int useDuration = itemStack.getUseDuration();
+                if (itemStack.getUseAction() == UseAction.DRINK) {
+                    player.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 0.5F, player.world.rand.nextFloat() * 0.1F + 0.9F);
+                }
+                if (itemStack.getUseAction() == UseAction.EAT) {
+                    this.addItemParticles(itemStack, 5, player);
+                    player.playSound(SoundEvents.ENTITY_GENERIC_EAT, 0.5F + 0.5F * (float) player.world.rand.nextInt(2), (player.world.rand.nextFloat() - player.world.rand.nextFloat()) * 0.2F + 1.0F);
+                }
+            }
             itemStack.onItemUseFinish(worldIn, player);
             player.onFoodEaten(worldIn, itemStack);
             state.removedByPlayer(worldIn, pos, player, false, worldIn.getFluidState(pos));
@@ -117,7 +144,25 @@ public class RiceBlock extends Block {
     }
 
     public ItemStack getItem(IBlockReader worldIn, BlockPos pos, BlockState state) {
-        return new ItemStack(Items.BOWL);
+        return new ItemStack(state.getBlock().asItem());
+    }
+
+    private void addItemParticles(ItemStack stack, int count, PlayerEntity player) { //copied from LivingEntity class
+        for(int i = 0; i < count; ++i) {
+            Vec3d vec3d = new Vec3d(((double)player.world.rand.nextFloat() - 0.5D) * 0.1D, Math.random() * 0.1D + 0.1D, 0.0D);
+            vec3d = vec3d.rotatePitch(-player.rotationPitch * ((float)Math.PI / 180F));
+            vec3d = vec3d.rotateYaw(-player.rotationYaw * ((float)Math.PI / 180F));
+            double d0 = (double)(-player.world.rand.nextFloat()) * 0.6D - 0.3D;
+            Vec3d vec3d1 = new Vec3d(((double)player.world.rand.nextFloat() - 0.5D) * 0.3D, d0, 0.6D);
+            vec3d1 = vec3d1.rotatePitch(-player.rotationPitch * ((float)Math.PI / 180F));
+            vec3d1 = vec3d1.rotateYaw(-player.rotationYaw * ((float)Math.PI / 180F));
+            vec3d1 = vec3d1.add(player.getPosX(), player.getPosYEye(), player.getPosZ());
+            if (player.world instanceof ServerWorld) //Forge: Fix MC-2518 spawnParticle is nooped on server, need to use server specific variant
+                ((ServerWorld)player.world).spawnParticle(new ItemParticleData(ParticleTypes.ITEM, stack), vec3d1.x, vec3d1.y, vec3d1.z, 1, vec3d.x, vec3d.y + 0.05D, vec3d.z, 0.0D);
+            else
+                player.world.addParticle(new ItemParticleData(ParticleTypes.ITEM, stack), vec3d1.x, vec3d1.y, vec3d1.z, vec3d.x, vec3d.y + 0.05D, vec3d.z);
+        }
+
     }
 
 

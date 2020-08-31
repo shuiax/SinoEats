@@ -22,7 +22,7 @@ public class Generation {
         ForgeRegistries.BIOMES.forEach(biome -> {
             biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                     Feature.RANDOM_PATCH.withConfiguration(WILD_PLANT_CONFIG)
-                            .withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(10))));
+                            .withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(15))));
         });
     }
 

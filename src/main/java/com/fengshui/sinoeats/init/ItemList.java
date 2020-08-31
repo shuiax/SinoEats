@@ -67,7 +67,7 @@ public class ItemList {
     //container foods
 
     public static final RegistryObject<Item> RICE = ITEMS.register("rice",
-            () -> new ContainerFood(new Item.Properties().group(Main.TAB)
+            () -> new BlockContainerFood(BlockList.RICE_BLOCK.get(),new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(5).saturation(6f).build()), Items.BOWL, false, null));
 
     public static final RegistryObject<Item> TEA = ITEMS.register("tea",
@@ -97,9 +97,5 @@ public class ItemList {
     //testing out BowlBlock, remember to delete later
     public static final RegistryObject<Item> BOWL_BLOCK = ITEMS.register("bowl_block",
             () -> new BlockItem(BlockList.BOWL_BLOCK.get(),  new Item.Properties().group(Main.TAB)));
-    public static final RegistryObject<Item> RICE_BLOCK = ITEMS.register("rice_block",
-            () -> new BlockContainerFood(BlockList.RICE_BLOCK.get(),  new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(5).saturation(6f).build()), Items.BOWL, false, null));
-
 
 }
