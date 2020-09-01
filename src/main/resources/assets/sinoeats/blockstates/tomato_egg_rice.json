@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sinoeats:block/tomato_egg_rice" },
+    "facing=south": { "model": "sinoeats:block/tomato_egg_rice", "y": 180 },
+    "facing=west":  { "model": "sinoeats:block/tomato_egg_rice", "y": 270 },
+    "facing=east":  { "model": "sinoeats:block/tomato_egg_rice", "y": 90 }
+  }
+}

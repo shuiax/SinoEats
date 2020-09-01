@@ -28,7 +28,7 @@ public class ModdingToolItem extends Item {
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (KeyboardHelper.isHoldingShift()) {
-            tooltip.add(new StringTextComponent("Changes time of day"));
+            tooltip.add(new StringTextComponent("Changes gamemode, hunger, and time of day"));
         } else {
             tooltip.add(new StringTextComponent("Hold" + "\u00A7e" + " Shift " + "\u00A77" + "for more information!"));
         }
@@ -50,7 +50,7 @@ public class ModdingToolItem extends Item {
             if(playerIn.getFoodStats().getFoodLevel() != 20){
                 playerIn.getFoodStats().setFoodLevel(20);
             }else{
-                playerIn.getFoodStats().setFoodLevel(10);
+                playerIn.getFoodStats().setFoodLevel(4);
             }
         }
         return super.onItemRightClick(worldIn, playerIn, handIn);
