@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sinoeats:block/cup" },
+    "facing=south": { "model": "sinoeats:block/cup", "y": 180 },
+    "facing=west":  { "model": "sinoeats:block/cup", "y": 270 },
+    "facing=east":  { "model": "sinoeats:block/cup", "y": 90 }
+  }
+}

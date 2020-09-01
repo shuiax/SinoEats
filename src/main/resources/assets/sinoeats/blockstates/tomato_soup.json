@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sinoeats:block/tomato_soup" },
+    "facing=south": { "model": "sinoeats:block/tomato_soup", "y": 180 },
+    "facing=west":  { "model": "sinoeats:block/tomato_soup", "y": 270 },
+    "facing=east":  { "model": "sinoeats:block/tomato_soup", "y": 90 }
+  }
+}

@@ -92,7 +92,7 @@ public class Main{
         ComposterBlock.CHANCES.put(ItemList.RICE_SEEDS.get(), 0.3F);
         ComposterBlock.CHANCES.put(ItemList.PEPPER_SEEDS.get(), 0.3F);
         ComposterBlock.CHANCES.put(ItemList.TEA_SEEDS.get(), 0.3F);
-        ComposterBlock.CHANCES.put(ItemList.SOYBEAN_CROP.get(), 0.3F);
+        ComposterBlock.CHANCES.put(ItemList.SOYBEAN_SEEDS.get(), 0.3F);
     }
 
     public static class ModItemGroup extends ItemGroup {

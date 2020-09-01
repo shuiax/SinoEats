@@ -21,7 +21,7 @@ public class ItemList {
             () -> new ModdingToolItem(new Item.Properties().group(Main.TAB)));
 
     public static final RegistryObject<Item> CUP = ITEMS.register("cup",
-            () -> new Item(new Item.Properties().group(Main.TAB)));
+            () -> new CupBlockItem(BlockList.CUP_BLOCK.get(), new Item.Properties().group(Main.TAB)));
 
     //crops
 
@@ -37,7 +37,7 @@ public class ItemList {
             () -> new BlockItem(BlockList.TEA_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
     
-    public static final RegistryObject<Item> SOYBEAN_CROP = ITEMS.register("soybean_crop",
+    public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_crop",
             () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
@@ -67,16 +67,16 @@ public class ItemList {
     //container foods
 
     public static final RegistryObject<Item> RICE = ITEMS.register("rice",
-            () -> new BlockContainerFood(BlockList.RICE_BLOCK.get(),new Item.Properties().group(Main.TAB)
+            () -> new PlaceableContainerFood(BlockList.RICE_BLOCK.get(),new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(5).saturation(6f).build()), Items.BOWL, false, null));
 
     public static final RegistryObject<Item> TEA = ITEMS.register("tea",
-            () -> new ContainerFood(new Item.Properties().group(Main.TAB)
+            () -> new PlaceableContainerFood(BlockList.TEA_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(2).saturation(7f).fastToEat().setAlwaysEdible().build()), CUP.get(), true,
                     new Effect[]{Effects.SLOWNESS, Effects.RESISTANCE, Effects.ABSORPTION, Effects.POISON, Effects.STRENGTH, Effects.SPEED}));
 
     public static final RegistryObject<Item> SOYMILK = ITEMS.register("soymilk",
-            () -> new ContainerFood(new Item.Properties().group(Main.TAB).containerItem(CUP.get())
+            () -> new PlaceableContainerFood(BlockList.SOYMILK_BLOCK.get(), new Item.Properties().group(Main.TAB).containerItem(CUP.get())
                     .food(new Food.Builder().hunger(3).saturation(7f).fastToEat().setAlwaysEdible().build()), CUP.get(), true,
                     new Effect[]{Effects.NAUSEA, Effects.HUNGER, Effects.STRENGTH, Effects.SPEED}));
 
@@ -86,16 +86,23 @@ public class ItemList {
             () -> new Item(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(4).saturation(3.0f).build())));
 
-    public static final RegistryObject<Item> TOMATO_SOUP = ITEMS.register("tomato_soup",
-            () -> new ContainerFood(new Item.Properties().group(Main.TAB)
+    //update food values + 2d texture
+    public static final RegistryObject<Item> CONGEE = ITEMS.register("congee",
+            () -> new PlaceableContainerFood(BlockList.CONGEE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(4.0f).build()), Items.BOWL, false, null));
 
-    public static final RegistryObject<Item> FRIED_RICE = ITEMS.register("fried_rice",
-            () -> new ContainerFood(new Item.Properties().group(Main.TAB)
+    public static final RegistryObject<Item> TOMATO_SOUP = ITEMS.register("tomato_soup",
+            () -> new PlaceableContainerFood(BlockList.TOMATO_SOUP_BLOCK.get(), new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(6).saturation(4.0f).build()), Items.BOWL, false, null));
+
+    //update food values + 2d texture
+    public static final RegistryObject<Item> EGG_RICE = ITEMS.register("egg_rice",
+            () -> new PlaceableContainerFood(BlockList.EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
 
-    //testing out BowlBlock, remember to delete later
-    public static final RegistryObject<Item> BOWL_BLOCK = ITEMS.register("bowl_block",
-            () -> new BlockItem(BlockList.BOWL_BLOCK.get(),  new Item.Properties().group(Main.TAB)));
+    //update food values + 2d texture
+    public static final RegistryObject<Item> TOMATO_EGG_RICE = ITEMS.register("tomato_egg_rice",
+            () -> new PlaceableContainerFood(BlockList.TOMATO_EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
 
 }

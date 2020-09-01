@@ -11,7 +11,7 @@
   "block.sinoeats.wild_plant": "Grass",
   "block.sinoeats.bowl_block": "Bowl",
 
-  "item.sinoeats.cup": "Cup",
+  "block.sinoeats.cup": "Cup",
 
   "item.sinoeats.tea_leaf": "Tea Leaf",
   "item.sinoeats.raw_rice": "Raw Rice",
@@ -20,10 +20,10 @@
   "item.sinoeats.pepper": "Pepper",
   "block.sinoeats.rice": "Rice",
 
-  "item.sinoeats.tea": "Tea",
+  "block.sinoeats.tea": "Tea",
   "item.sinoeats.soymilk": "Soymilk",
 
   "item.sinoeats.fried_rice": "Fried Rice",
-  "item.sinoeats.tomato_soup": "Tomato Soup",
+  "block.sinoeats.tomato_soup": "Tomato Soup",
   "item.sinoeats.tofu": "Tofu"
 }

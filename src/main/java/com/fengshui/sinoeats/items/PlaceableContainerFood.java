@@ -17,13 +17,13 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class BlockContainerFood extends BlockItem {
+public class PlaceableContainerFood extends BlockItem { //containerfood that has a block (is placeable)
     private IItemProvider containerItem;
     private boolean negatesEffects;
     private Effect[] effectList;
     private boolean placed;
 
-    public BlockContainerFood(Block blockIn, Properties builder, IItemProvider containerItem, boolean negatesEffects, Effect[] effectList) {
+    public PlaceableContainerFood(Block blockIn, Properties builder, IItemProvider containerItem, boolean negatesEffects, Effect[] effectList) {
         super(blockIn, builder);
         this.containerItem = containerItem;
         this.negatesEffects = negatesEffects;
