@@ -86,23 +86,23 @@ public class ItemList {
             () -> new Item(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(4).saturation(3.0f).build())));
 
-    //update food values + 2d texture
+    //update 2d texture
     public static final RegistryObject<Item> CONGEE = ITEMS.register("congee",
             () -> new PlaceableContainerFood(BlockList.CONGEE_BLOCK.get(), new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(6).saturation(4.0f).build()), Items.BOWL, false, null));
+                    .food(new Food.Builder().hunger(6).saturation(8f).build()), Items.BOWL, false, null));
 
     public static final RegistryObject<Item> TOMATO_SOUP = ITEMS.register("tomato_soup",
             () -> new PlaceableContainerFood(BlockList.TOMATO_SOUP_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(4.0f).build()), Items.BOWL, false, null));
 
-    //update food values + 2d texture
+    //update 2d texture
     public static final RegistryObject<Item> EGG_RICE = ITEMS.register("egg_rice",
             () -> new PlaceableContainerFood(BlockList.EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
 
-    //update food values + 2d texture
+    //update 2d texture
     public static final RegistryObject<Item> TOMATO_EGG_RICE = ITEMS.register("tomato_egg_rice",
             () -> new PlaceableContainerFood(BlockList.TOMATO_EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
-                    .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
+                    .food(new Food.Builder().hunger(8).saturation(6f).build()), Items.BOWL, false, null));
 
 }
