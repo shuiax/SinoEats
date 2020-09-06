@@ -2,10 +2,7 @@ package com.fengshui.sinoeats.init;
 
 import com.fengshui.sinoeats.Main;
 import com.fengshui.sinoeats.items.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -25,30 +22,27 @@ public class ItemList {
 
     //crops
 
-    public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_crop",
-            () -> new BlockItem(BlockList.RICE_CROP.get(),
+    public static final RegistryObject<Item> RICE_SEEDS = ITEMS.register("rice_seeds",
+            () -> new BlockNamedItem(BlockList.RICE_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
-    public static final RegistryObject<Item> PEPPER_SEEDS = ITEMS.register("pepper_crop",
-            () -> new BlockItem(BlockList.PEPPER_CROP.get(),
+    public static final RegistryObject<Item> PEPPER_SEEDS = ITEMS.register("pepper_seeds",
+            () -> new BlockNamedItem(BlockList.PEPPER_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
-    public static final RegistryObject<Item> TEA_SEEDS = ITEMS.register("tea_crop",
-            () -> new BlockItem(BlockList.TEA_CROP.get(),
+    public static final RegistryObject<Item> TEA_SEEDS = ITEMS.register("tea_seeds",
+            () -> new BlockNamedItem(BlockList.TEA_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
     
-    public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_crop",
-            () -> new BlockItem(BlockList.SOYBEAN_CROP.get(),
+    public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_seeds",
+            () -> new BlockNamedItem(BlockList.SOYBEAN_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
-    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_crop",
-            () -> new BlockItem(BlockList.TOMATO_CROP.get(),
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new BlockNamedItem(BlockList.TOMATO_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
     //ingredients
-  
-    public static final RegistryObject<Item> RAW_RICE = ITEMS.register("raw_rice",
-            () -> new Item(new Item.Properties().group(Main.TAB)));
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(Main.TAB)));

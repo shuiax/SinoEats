@@ -2,28 +2,35 @@
   "itemGroup.mod_group": "SinoEats",
   "item.sinoeats.modding_tool": "Modding Tool",
 
-  "block.sinoeats.rice_crop": "Rice Seeds",
-  "block.sinoeats.soybean_crop": "Soybeans",
-  "block.sinoeats.pepper_crop": "Pepper Seeds",
-  "block.sinoeats.tea_crop": "Tea Seeds",
-  "block.sinoeats.tomato_crop": "Tomato Seeds",
+  "block.sinoeats.rice_crop": "Rice Crop",
+  "block.sinoeats.soybean_crop": "Soybean Crop",
+  "block.sinoeats.pepper_crop": "Pepper Crop",
+  "block.sinoeats.tea_crop": "Tea Crop",
+  "block.sinoeats.tomato_crop": "Tomato Crop",
+
+  "item.sinoeats.rice_seeds": "Rice Seeds",
+  "item.sinoeats.soybean_seeds": "Soybeans",
+  "item.sinoeats.pepper_seeds": "Pepper Seeds",
+  "item.sinoeats.tea_seeds": "Tea Seeds",
+  "item.sinoeats.tomato_seeds": "Tomato Seeds",
 
   "block.sinoeats.wild_plant": "Grass",
   "block.sinoeats.bowl_block": "Bowl",
-
   "block.sinoeats.cup": "Cup",
 
   "item.sinoeats.tea_leaf": "Tea Leaf",
-  "item.sinoeats.raw_rice": "Raw Rice",
-
   "item.sinoeats.tomato": "Tomato",
   "item.sinoeats.pepper": "Pepper",
+
   "block.sinoeats.rice": "Rice",
-
   "block.sinoeats.tea": "Tea",
-  "item.sinoeats.soymilk": "Soymilk",
+  "block.sinoeats.soymilk": "Soymilk",
 
-  "item.sinoeats.fried_rice": "Fried Rice",
+  "item.sinoeats.tofu": "Tofu",
+
+  "block.sinoeats.egg_rice": "Egg Fried Rice",
+  "block.sinoeats.tomato_egg_rice": "Tomato and Egg Fried Rice",
   "block.sinoeats.tomato_soup": "Tomato Soup",
-  "item.sinoeats.tofu": "Tofu"
+  "block.sinoeats.congee": "Congee"
+
 }

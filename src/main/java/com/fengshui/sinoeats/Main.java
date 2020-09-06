@@ -85,7 +85,6 @@ public class Main{
 
     private void compostInit(){
         ComposterBlock.CHANCES.put(ItemList.TOMATO.get(), 0.65F);
-        ComposterBlock.CHANCES.put(ItemList.RAW_RICE.get(), 0.65F);
         ComposterBlock.CHANCES.put(ItemList.PEPPER.get(), 0.65F);
         ComposterBlock.CHANCES.put(ItemList.TEA_LEAF.get(), 0.5F);
         ComposterBlock.CHANCES.put(ItemList.TOMATO_SEEDS.get(), 0.3F);

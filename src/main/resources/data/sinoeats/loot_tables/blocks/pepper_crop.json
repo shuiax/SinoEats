@@ -39,7 +39,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "sinoeats:pepper_crop"
+              "name": "sinoeats:pepper_seeds"
             }
           ]
         }
@@ -61,7 +61,7 @@
               }
             }
           ],
-          "name": "sinoeats:pepper_crop"
+          "name": "sinoeats:pepper_seeds"
         }
       ],
       "conditions": [
