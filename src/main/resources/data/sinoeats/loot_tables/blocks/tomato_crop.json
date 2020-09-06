@@ -39,7 +39,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "sinoeats:tomato_crop"
+              "name": "sinoeats:tomato_seeds"
             }
           ]
         }
@@ -61,7 +61,7 @@
               }
             }
           ],
-          "name": "sinoeats:tomato_crop"
+          "name": "sinoeats:tomato_seeds"
         }
       ],
       "conditions": [

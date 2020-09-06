@@ -31,7 +31,7 @@ public class BowlBlock extends Block {
             Block.makeCuboidShape(4, 2, 6, 5, 3, 10),
             Block.makeCuboidShape(6, 2, 4, 10, 3, 5),
             Block.makeCuboidShape(11, 2, 6, 12, 3, 10),
-            Block.makeCuboidShape(6, 2, 11, 11, 3, 12),
+            Block.makeCuboidShape(6, 2, 11, 10, 3, 12),
             Block.makeCuboidShape(10, 2, 5, 11, 3, 6),
             Block.makeCuboidShape(5, 2, 5, 6, 3, 6),
             Block.makeCuboidShape(5, 2, 10, 6, 3, 11),

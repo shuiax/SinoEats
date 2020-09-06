@@ -1,7 +1,5 @@
 package com.fengshui.sinoeats.blocks;
 
-
-import com.fengshui.sinoeats.init.BlockList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -89,7 +87,7 @@ public class ContainerFoodBlock extends Block {
                     player.playSound(SoundEvents.ENTITY_GENERIC_DRINK, 0.5F, player.world.rand.nextFloat() * 0.1F + 0.9F);
                 }
                 if (itemStack.getUseAction() == UseAction.EAT) {
-                    this.addItemParticles(itemStack, 5, player);
+                    this.addItemParticles(itemStack, 1, player);
                     player.playSound(SoundEvents.ENTITY_GENERIC_EAT, 0.5F + 0.5F * (float) player.world.rand.nextInt(2), (player.world.rand.nextFloat() - player.world.rand.nextFloat()) * 0.2F + 1.0F);
                 }
             }

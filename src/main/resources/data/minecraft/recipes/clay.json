@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "tag": "sinoeats:clay"
+    }
+  },
+  "result": {
+    "item": "minecraft:clay"
+  }
+}

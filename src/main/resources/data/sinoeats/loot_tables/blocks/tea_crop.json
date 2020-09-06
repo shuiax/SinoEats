@@ -39,7 +39,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "sinoeats:tea_crop"
+              "name": "sinoeats:tea_seeds"
             }
           ]
         }
@@ -61,7 +61,7 @@
               }
             }
           ],
-          "name": "sinoeats:tea_crop"
+          "name": "sinoeats:tea_seeds"
         }
       ],
       "conditions": [

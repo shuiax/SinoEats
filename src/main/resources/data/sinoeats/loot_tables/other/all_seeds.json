@@ -6,23 +6,27 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sinoeats:tomato_crop"
+          "name": "sinoeats:tomato_seeds"
         },
         {
           "type": "minecraft:item",
-          "name": "sinoeats:pepper_crop"
+          "name": "sinoeats:pepper_seeds"
         },
         {
           "type": "minecraft:item",
-          "name": "sinoeats:soybean_crop"
+          "name": "sinoeats:soybean_seeds"
         },
         {
           "type": "minecraft:item",
-          "name": "sinoeats:tea_crop"
+          "name": "sinoeats:tea_seeds"
         },
         {
           "type": "minecraft:item",
-          "name": "sinoeats:rice_crop"
+          "name": "sinoeats:rice_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat_seeds"
         }
       ],
       "conditions": [

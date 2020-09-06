@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#",
-    "B"
+    "###",
+    " B "
   ],
   "key": {
     "#": {
-      "item": "sinoeats:raw_rice"
+      "item": "sinoeats:rice_seeds"
     },
     "B": {
       "item": "minecraft:bowl"

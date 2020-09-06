@@ -4,14 +4,14 @@
     "#ST"
   ],
   "key": {
-    "T": {
-      "item": "sinoeats:tomato"
-    },
     "#": {
       "item": "minecraft:egg"
     },
     "S": {
       "item": "sinoeats:rice"
+    },
+    "T": {
+      "item": "sinoeats:tomato"
     }
   },
   "result": {
