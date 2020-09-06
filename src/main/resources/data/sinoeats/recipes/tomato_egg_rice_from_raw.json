@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#ST",
+    " B "
+  ],
+  "key": {
+    "T": {
+      "item": "sinoeats:tomato"
+    },
+    "#": {
+      "item": "minecraft:egg"
+    },
+    "S": {
+      "item": "sinoeats:raw_rice"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "sinoeats:tomato_egg_rice",
+    "count": 1
+  }
+}
