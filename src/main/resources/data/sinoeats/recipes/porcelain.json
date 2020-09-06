@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sinoeats:kaolin"
+  },
+  "result": "sinoeats:porcelain",
+  "experience": 0.3,
+  "cookingtime": 200
+}

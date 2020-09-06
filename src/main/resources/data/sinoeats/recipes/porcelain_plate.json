@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "sinoeats:porcelain"
+    }
+  },
+  "result": {
+    "item": "sinoeats:porcelain_bowl",
+    "count": 1
+  }
+}

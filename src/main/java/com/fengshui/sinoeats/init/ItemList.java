@@ -18,7 +18,16 @@ public class ItemList {
             () -> new ModdingToolItem(new Item.Properties().group(Main.TAB)));
 
     public static final RegistryObject<Item> CUP = ITEMS.register("cup",
-            () -> new CupBlockItem(BlockList.CUP_BLOCK.get(), new Item.Properties().group(Main.TAB)));
+            () -> new UnplaceableBlockItem(BlockList.CUP_BLOCK.get(), new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> KAOLIN = ITEMS.register("kaolin",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> PORCELAIN = ITEMS.register("porcelain",
+            () -> new Item(new Item.Properties().group(Main.TAB)));
+
+    public static final RegistryObject<Item> PORCELAIN_PLATE = ITEMS.register("porcelain_plate",
+            () -> new UnplaceableBlockItem(BlockList.PORCELAIN_PLATE_BLOCK.get(), new Item.Properties().group(Main.TAB)));
 
     //crops
 
@@ -42,12 +51,10 @@ public class ItemList {
             () -> new BlockNamedItem(BlockList.TOMATO_CROP.get(),
                     new Item.Properties().group(Main.TAB)));
 
-    //ingredients
+    //crop drops
 
     public static final RegistryObject<Item> TEA_LEAF = ITEMS.register("tea_leaf",
             () -> new Item(new Item.Properties().group(Main.TAB)));
-
-    //consumable products
 
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().group(Main.TAB)
@@ -80,7 +87,6 @@ public class ItemList {
             () -> new Item(new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(4).saturation(3.0f).build())));
 
-    //update 2d texture
     public static final RegistryObject<Item> CONGEE = ITEMS.register("congee",
             () -> new PlaceableContainerFood(BlockList.CONGEE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(8f).build()), Items.BOWL, false, null));
@@ -89,7 +95,6 @@ public class ItemList {
             () -> new PlaceableContainerFood(BlockList.TOMATO_SOUP_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(6).saturation(4.0f).build()), Items.BOWL, false, null));
 
-    //update 2d texture
     public static final RegistryObject<Item> EGG_RICE = ITEMS.register("egg_rice",
             () -> new PlaceableContainerFood(BlockList.EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
@@ -98,5 +103,9 @@ public class ItemList {
     public static final RegistryObject<Item> TOMATO_EGG_RICE = ITEMS.register("tomato_egg_rice",
             () -> new PlaceableContainerFood(BlockList.TOMATO_EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(8).saturation(6f).build()), Items.BOWL, false, null));
+
+    public static final RegistryObject<Item> MAPO_TOFU = ITEMS.register("mapo_tofu",
+            () -> new PlaceableContainerFood(BlockList.MAPO_TOFU_BLOCK.get(), new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(8).saturation(6f).build()), PORCELAIN_PLATE.get(), false, null));
 
 }

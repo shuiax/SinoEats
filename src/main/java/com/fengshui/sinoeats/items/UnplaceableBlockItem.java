@@ -6,9 +6,9 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.util.ActionResultType;
 
-public class CupBlockItem extends BlockItem {
+public class UnplaceableBlockItem extends BlockItem {
 
-    public CupBlockItem(Block blockIn, Properties builder) {
+    public UnplaceableBlockItem(Block blockIn, Properties builder) {
         super(blockIn, builder);
     }
 

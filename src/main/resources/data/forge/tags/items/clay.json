@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:clay/kaolin",
+    "#forge:clay/clay_ball"
+  ]
+}
