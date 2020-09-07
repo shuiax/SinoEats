@@ -1,7 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#ST",
+    "#T ",
+    "SSS",
     " B "
   ],
   "key": {
@@ -12,7 +13,7 @@
       "item": "minecraft:egg"
     },
     "S": {
-      "item": "sinoeats:raw_rice"
+      "item": "sinoeats:rice_seeds"
     },
     "B": {
       "item": "minecraft:bowl"
