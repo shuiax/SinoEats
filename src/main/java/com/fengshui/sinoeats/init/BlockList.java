@@ -42,7 +42,7 @@ public class BlockList {
             () -> new CupBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f, 2.0f)));
 
     public static final RegistryObject<Block> PORCELAIN_PLATE_BLOCK = BLOCKS.register("porcelain_plate",
-            () -> new Block(Block.Properties.create(Material.CLAY).hardnessAndResistance(1f, 2.0f)));
+            () -> new PlateBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(1f, 2.0f)));
 
     //placeable consumables
 
@@ -76,5 +76,5 @@ public class BlockList {
 
     public static final RegistryObject<Block> MAPO_TOFU_BLOCK = BLOCKS.register("mapo_tofu",
             () -> new ContainerFoodBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)
-                    , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.TOMATO_SOUP_SHAPES));
+                    , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.MAPO_TOFU_SHAPES));
 }
