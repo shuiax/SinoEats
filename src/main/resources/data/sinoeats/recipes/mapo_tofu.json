@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SSS",
+    " B "
+  ],
+  "key": {
+    "#": {
+      "item": "sinoeats:pepper"
+    },
+    "S": {
+      "item": "sinoeats:tofu"
+    },
+    "B": {
+      "item": "sinoeats:porcelain_plate"
+    }
+  },
+  "result": {
+    "item": "sinoeats:mapo_tofu",
+    "count": 1
+  }
+}

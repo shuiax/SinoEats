@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "sinoeats:block/porcelain_plate" },
+    "facing=south": { "model": "sinoeats:block/porcelain_plate", "y": 180 },
+    "facing=west":  { "model": "sinoeats:block/porcelain_plate", "y": 270 },
+    "facing=east":  { "model": "sinoeats:block/porcelain_plate", "y": 90 }
+  }
+}
