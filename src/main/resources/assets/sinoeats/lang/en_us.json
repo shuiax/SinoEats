@@ -16,6 +16,7 @@
 
   "block.sinoeats.bowl_block": "Bowl",
   "block.sinoeats.cup": "Cup",
+  "block.sinoeats.porcelain_plate": "Porcelain Plate",
 
   "item.sinoeats.kaolin": "Kaolin",
   "item.sinoeats.porcelain": "Porcelain",
@@ -34,5 +35,7 @@
   "block.sinoeats.tomato_egg_rice": "Tomato and Egg Fried Rice",
   "block.sinoeats.tomato_soup": "Tomato Soup",
   "block.sinoeats.congee": "Congee"
+
+
 
 }
