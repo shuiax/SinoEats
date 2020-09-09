@@ -99,13 +99,16 @@ public class ItemList {
             () -> new PlaceableContainerFood(BlockList.EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(7).saturation(6f).build()), Items.BOWL, false, null));
 
-    //update 2d texture
     public static final RegistryObject<Item> TOMATO_EGG_RICE = ITEMS.register("tomato_egg_rice",
             () -> new PlaceableContainerFood(BlockList.TOMATO_EGG_RICE_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(8).saturation(6f).build()), Items.BOWL, false, null));
 
     public static final RegistryObject<Item> MAPO_TOFU = ITEMS.register("mapo_tofu",
             () -> new PlaceableContainerFood(BlockList.MAPO_TOFU_BLOCK.get(), new Item.Properties().group(Main.TAB)
+                    .food(new Food.Builder().hunger(8).saturation(6f).build()), PORCELAIN_PLATE.get(), false, null));
+
+    public static final RegistryObject<Item> BOILED_FISH = ITEMS.register("boiled_fish",
+            () -> new PlaceableContainerFood(BlockList.BOILED_FISH_BLOCK.get(), new Item.Properties().group(Main.TAB)
                     .food(new Food.Builder().hunger(8).saturation(6f).build()), PORCELAIN_PLATE.get(), false, null));
 
 }
