@@ -2,6 +2,7 @@ package com.fengshui.sinoeats.init;
 
 import com.fengshui.sinoeats.Main;
 import com.fengshui.sinoeats.blocks.*;
+import com.fengshui.sinoeats.blocks.voxelshapes.ContainerBlockShapes;
 import com.fengshui.sinoeats.blocks.voxelshapes.ContainerFoodBlockShapes;
 import com.fengshui.sinoeats.blocks.voxelshapes.CropsBlockShapes;
 import net.minecraft.block.Block;
@@ -36,13 +37,13 @@ public class BlockList {
 
     //container blocks
     public static final RegistryObject<Block> BOWL_BLOCK = BLOCKS.register("bowl_block",
-            () -> new BowlBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)));
+            () -> new ContainerBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f), ContainerBlockShapes.BOWL_SHAPE));
 
     public static final RegistryObject<Block> CUP_BLOCK = BLOCKS.register("cup",
-            () -> new CupBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f, 2.0f)));
+            () -> new ContainerBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f, 2.0f), ContainerBlockShapes.CUP_SHAPE));
 
     public static final RegistryObject<Block> PORCELAIN_PLATE_BLOCK = BLOCKS.register("porcelain_plate",
-            () -> new PlateBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(1f, 2.0f)));
+            () -> new ContainerBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(1f, 2.0f), ContainerBlockShapes.PLATE_SHAPE));
 
     //placeable consumables
 
