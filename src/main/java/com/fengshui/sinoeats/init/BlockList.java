@@ -77,4 +77,8 @@ public class BlockList {
     public static final RegistryObject<Block> MAPO_TOFU_BLOCK = BLOCKS.register("mapo_tofu",
             () -> new ContainerFoodBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)
                     , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.MAPO_TOFU_SHAPES));
+
+    public static final RegistryObject<Block> BOILED_FISH_BLOCK = BLOCKS.register("boiled_fish",
+            () -> new ContainerFoodBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)
+                    , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.MAPO_TOFU_SHAPES));
 }

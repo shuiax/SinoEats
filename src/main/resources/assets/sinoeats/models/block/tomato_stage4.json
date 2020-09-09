@@ -1,6 +1,6 @@
 {
-  "parent": "sinoeats:block/cross_crop",
+  "parent": "block/cross",
   "textures": {
-    "cross_crop": "sinoeats:blocks/tomato_stage4"
+    "cross": "sinoeats:blocks/tomato_stage4"
   }
 }
