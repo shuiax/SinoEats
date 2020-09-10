@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sinoeats:rice"
+  },
+  "result": "sinoeats:congee",
+  "experience": 0.4,
+  "cookingtime": 150
+}

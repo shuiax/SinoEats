@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "S#S",
+    " B "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "#": {
+      "item": "sinoeats:pepper"
+    },
+    "S": {
+      "tag": "sinoeats:cooked_fish"
+    },
+    "B": {
+      "item": "sinoeats:porcelain_plate"
+    }
+  },
+  "result": {
+    "item": "sinoeats:boiled_fish",
+    "count": 1
+  }
+}
