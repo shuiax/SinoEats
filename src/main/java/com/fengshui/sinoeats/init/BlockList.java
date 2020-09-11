@@ -43,7 +43,7 @@ public class BlockList {
             () -> new ContainerBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f, 2.0f), ContainerBlockShapes.CUP_SHAPE));
 
     public static final RegistryObject<Block> PORCELAIN_PLATE_BLOCK = BLOCKS.register("porcelain_plate",
-            () -> new ContainerBlock(Block.Properties.create(Material.CLAY).hardnessAndResistance(1f, 2.0f), ContainerBlockShapes.PLATE_SHAPE));
+            () -> new ContainerBlock(Block.Properties.create(Material.CLAY).sound(SoundType.GLASS).hardnessAndResistance(1f, 2.0f), ContainerBlockShapes.PLATE_SHAPE));
 
     //placeable consumables
 
@@ -81,5 +81,5 @@ public class BlockList {
 
     public static final RegistryObject<Block> BOILED_FISH_BLOCK = BLOCKS.register("boiled_fish",
             () -> new ContainerFoodBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1f, 2.0f)
-                    , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.MAPO_TOFU_SHAPES));
+                    , PORCELAIN_PLATE_BLOCK.get(), ContainerFoodBlockShapes.BOILED_FISH_SHAPES));
 }

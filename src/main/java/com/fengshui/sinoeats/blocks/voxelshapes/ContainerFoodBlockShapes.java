@@ -57,4 +57,10 @@ public class ContainerFoodBlockShapes { //referenced from BlockList, used in Con
 
     public static final VoxelShape[] MAPO_TOFU_SHAPES = new VoxelShape[]{MAPO_TOFU_SHAPE, MAPO_TOFU_SHAPE, MAPO_TOFU_SHAPE, MAPO_TOFU_SHAPE};
 
+    public static final VoxelShape BOILED_FISH_SHAPE = Stream.of(
+            Block.makeCuboidShape(2, 0, 2, 14, 2.4, 14)
+    ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
+
+    public static final VoxelShape[] BOILED_FISH_SHAPES = new VoxelShape[]{BOILED_FISH_SHAPE, BOILED_FISH_SHAPE, BOILED_FISH_SHAPE, BOILED_FISH_SHAPE};
+
 }
