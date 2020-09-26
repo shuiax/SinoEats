@@ -14,9 +14,6 @@ public class ItemList {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Main.MOD_ID);
 
-    public static final RegistryObject<Item> MODDING_TOOL = ITEMS.register("modding_tool",
-            () -> new ModdingToolItem(new Item.Properties().group(Main.TAB)));
-
     public static final RegistryObject<Item> CUP = ITEMS.register("cup",
             () -> new UnplaceableBlockItem(BlockList.CUP_BLOCK.get(), new Item.Properties().group(Main.TAB)));
 
