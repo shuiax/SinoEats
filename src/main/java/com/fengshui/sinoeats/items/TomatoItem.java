@@ -21,14 +21,6 @@ public class TomatoItem extends Item {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         if (KeyboardHelper.isHoldingCtrl()) {
             ItemStack itemstack = playerIn.getHeldItem(handIn);
-            if (playerIn.canEat(this.getFood().canEatWhenFull())) {
-                playerIn.setActiveHand(handIn);
-                return ActionResult.resultConsume(itemstack);
-            } else {
-                return ActionResult.resultFail(itemstack);
-            }
-        } else {
-            ItemStack itemstack = playerIn.getHeldItem(handIn);
             worldIn.playSound((PlayerEntity) null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
             if (!worldIn.isRemote) {
                 TomatoEntity tomatoentity = new TomatoEntity(worldIn, playerIn);
@@ -43,6 +35,14 @@ public class TomatoItem extends Item {
             }
 
             return ActionResult.resultSuccess(itemstack);
+        } else {
+            ItemStack itemstack = playerIn.getHeldItem(handIn);
+            if (playerIn.canEat(this.getFood().canEatWhenFull())) {
+                playerIn.setActiveHand(handIn);
+                return ActionResult.resultConsume(itemstack);
+            } else {
+                return ActionResult.resultFail(itemstack);
+            }
         }
     }
 }
